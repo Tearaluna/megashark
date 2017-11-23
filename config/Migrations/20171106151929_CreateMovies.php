@@ -36,5 +36,5 @@ class CreateMovies extends AbstractMigration
             'null' => false,
         ]);
         $table->create();
-    }
+    } //cakephp 3 migrations
 }

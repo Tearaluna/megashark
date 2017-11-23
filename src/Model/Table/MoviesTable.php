@@ -71,6 +71,11 @@ class MoviesTable extends Table
             ->integer('duration')
             ->requirePresence('duration', 'create')
             ->notEmpty('duration');
+            
+        $validator
+            ->integer('date')
+            ->requirePresence('date', 'create')
+            ->notEmpty('date');
 
         return $validator;
     }
