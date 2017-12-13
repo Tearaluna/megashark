@@ -41,7 +41,7 @@ class ShowtimesController extends AppController
         $showtime = $this->Showtimes->get($id, [
             'contain' => ['Movies', 'Rooms']
         ]);
-
+        
         $this->set('showtime', $showtime);
         $this->set('_serialize', ['showtime']);
     }
