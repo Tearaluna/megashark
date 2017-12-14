@@ -30,9 +30,9 @@
         <tr>
         <?php foreach ($showtimes as $show): ?>
             <tr>
-                <li><?= $this->Number->format($show->id) ?></li>
-                <li><?= $show->start ?></li>
-                <li><?= $show->end ?></li>
+                <td><?= $this->Number->format($show->id) ?></td>
+                <td><?= $show->start ?></td>
+                <td><?= $show->end ?></td>
             </tr>
         <?php endforeach; ?>
     </table>
