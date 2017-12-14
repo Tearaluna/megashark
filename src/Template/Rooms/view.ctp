@@ -1,7 +1,7 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Showtime[]|\Cake\Collection\CollectionInterface $showtimes c
+ * @var \App\Model\Entity\Showtime[] $showtimes
  */
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
@@ -16,7 +16,8 @@
     </ul>
 </nav>
 <div class="rooms view large-9 medium-8 columns content">
-    <h3><?= h($room->name) ?></h3>
+    <h4><?= "Planning room"?></h4>
+    <h5><?= h($room->name) ?></h5>
     <table class="vertical-table">
         <tr>
             <th scope="col"><?= "Lundi" ?></th>
@@ -29,9 +30,9 @@
         <tr>
         <?php foreach ($showtimes as $show): ?>
             <tr>
-                <td><?= $this->Number->format($show->id) ?></td>
-                <td><?= $show->start ?></td>
-                <td><?= $show->end ?></td>
+                <li><?= $this->Number->format($show->id) ?></li>
+                <li><?= $show->start ?></li>
+                <li><?= $show->end ?></li>
             </tr>
         <?php endforeach; ?>
     </table>
